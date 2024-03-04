@@ -31,3 +31,4 @@ app.use('/cart',require('./ROUTER/cartRouter'))
 app.get('/images/:id',(req,res)=>{
     res.sendFile(__dirname +  "/Assets/Images/"+ `${req.params.id}.png`)
 })
+app.use("/apis",require('./ROUTER/PaymentOrder'));
