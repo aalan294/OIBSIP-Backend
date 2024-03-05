@@ -25,8 +25,7 @@ router.post("/orders", async (req, res) => {
 			res.status(200).json({ data: order });
 		});
 	} catch (error) {
-		console.error("Internal Server Error:", error);
-		res.status(500).json({ message: "Internal Server Error!" });
+		res.json({ message: error.message });
 	}
 });
 
